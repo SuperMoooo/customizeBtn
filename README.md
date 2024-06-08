@@ -1,8 +1,4 @@
-# React + Vite
+Customize your frontEnd assets(btn, sliders, cards, etc...) - React, Tailwind, Material UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Btn:
+![image](https://github.com/SuperMoooo/customizeFrontEnd/assets/134961694/2f77c1c5-5e07-4548-855f-726daf274083)
