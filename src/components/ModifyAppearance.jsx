@@ -58,7 +58,7 @@ export default function ModifyAppearance({
     setHoverOn,
 }) {
     return (
-        <div className="grid grid-cols-4 justify-items-center *:rounded gap-2  items-center justify-center  w-full *:tracking-widest  *:text-white *:border *:border-[#4b4b4b] *:flex-1 *:w-full *:h-20 *:flex *:items-center *:justify-center *:cursor-pointer *:space-x-4">
+        <div className="grid grid-cols-4 justify-items-center *:rounded gap-2  items-center justify-center  w-full *:tracking-widest  *:text-white *:border *:border-[#4b4b4b] *:flex-1 *:w-full *:h-20 *:flex *:items-center *:justify-center *:cursor-pointer *:space-x-4 *:shadow">
             <TextColor textColor={textColor} setTextColor={setTextColor} />
 
             <BackgroundColor
