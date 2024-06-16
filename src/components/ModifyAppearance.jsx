@@ -58,9 +58,17 @@ export default function ModifyAppearance({
     setHoverOn,
 }) {
     return (
-        <div className="grid grid-cols-4 justify-items-center *:rounded gap-2  items-center justify-center  w-full *:tracking-widest  *:text-white *:border *:border-[#4b4b4b] *:flex-1 *:w-full *:h-20 *:flex *:items-center *:justify-center *:cursor-pointer *:space-x-4">
+        <section
+            style={{ background: bgPageColor }}
+            className="grid *:text-sm rounded md:grid-cols-5 lg:grid-cols-8 grid-cols-3 gap-4  justify-items-center  *:rounded  items-center justify-center  w-full *:tracking-widest  *:text-white *:border *:border-[#4b4b4b] *:shadow *:flex-1 *:w-40 *:h-20 *:flex *:items-center *:justify-center *:cursor-pointer *:space-x-2"
+        >
             <TextColor textColor={textColor} setTextColor={setTextColor} />
-
+            <FontSize fontSize={fontSize} setFontSize={setFontSize} />
+            <TextWeight textWeight={textWeight} setTextWeight={setTextWeight} />
+            <LetterSpacing
+                letterSpacing={letterSpacing}
+                setLetterSpacing={setLetterSpacing}
+            />
             <BackgroundColor
                 bgColor={bgColor}
                 setBgColor={setBgColor}
@@ -77,17 +85,6 @@ export default function ModifyAppearance({
                 bgPageColor={bgPageColor}
                 setBgPageColor={setBgPageColor}
             />
-            <FontSize fontSize={fontSize} setFontSize={setFontSize} />
-            <ShadowColor
-                shadowColor={shadowColor}
-                setShadowColor={setShadowColor}
-                shadowOn={shadowOn}
-                setShadowOn={setShadowOn}
-            />
-            <BorderSize
-                borderWidth={borderWidth}
-                setBorderWidth={setBorderWidth}
-            />
             <HoverColor
                 hoverColor={hoverColor}
                 setHoverColor={setHoverColor}
@@ -95,28 +92,33 @@ export default function ModifyAppearance({
                 setHoverOn={setHoverOn}
             />
 
-            <TextWeight textWeight={textWeight} setTextWeight={setTextWeight} />
+            <ShadowColor
+                shadowColor={shadowColor}
+                setShadowColor={setShadowColor}
+                shadowOn={shadowOn}
+                setShadowOn={setShadowOn}
+            />
             <ShadowOffset
                 shadowOffset={shadowOffset}
                 setShadowOffset={setShadowOffset}
+            />
+            <ShadowBlur shadowBlur={shadowBlur} setShadowBlur={setShadowBlur} />
+            <BorderSize
+                borderWidth={borderWidth}
+                setBorderWidth={setBorderWidth}
             />
 
             <BorderRadius
                 borderRadius={borderRadius}
                 setBorderRadius={setBorderRadius}
             />
-            <Width width={width} setWidth={setWidth} />
-
-            <LetterSpacing
-                letterSpacing={letterSpacing}
-                setLetterSpacing={setLetterSpacing}
-            />
-            <ShadowBlur shadowBlur={shadowBlur} setShadowBlur={setShadowBlur} />
             <BorderStyle
                 borderStyle={borderStyle}
                 setBorderStyle={setBorderStyle}
             />
+            <Width width={width} setWidth={setWidth} />
+
             <Height height={height} setHeight={setHeight} />
-        </div>
+        </section>
     );
 }

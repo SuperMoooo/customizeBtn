@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import SideBar from '../components/SideBar';
+import NavBar from '../components/Navbar';
 
 export default function Modals() {
     const [bgPageColor, setBgPageColor] = useState('#1a1a1a');
     return (
         <main className="flex flex-row" style={{ background: bgPageColor }}>
-            <SideBar />
+            <NavBar />
         </main>
     );
 }

@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import SideBar from '../components/SideBar';
+import NavBar from '../components/Navbar';
 import ModifyAppearance from '../components/ModifyAppearance';
 import Button from '../components/Button';
-import ModalWithCopyCode from '../components/ModalWithCopyCode';
+import BtnCopyCode from '../components/BtnCopyCode';
 
 export default function Buttons() {
     const [textColor, setTextColor] = useState('#ffffff');
@@ -29,12 +29,51 @@ export default function Buttons() {
     const [cssCode, setCssCode] = useState('');
     const [tailwindCode, setTailwindCode] = useState('');
     const [inlineCode, setInlineCode] = useState('');
-    const [openModal, setOpenModal] = useState(false);
 
     return (
-        <main className="flex flex-row" style={{ background: bgPageColor }}>
-            <SideBar />
-            <article className="flex flex-col items-center justify-center w-full h-dhv p-6 flex-1 relative">
+        <header
+            className="flex flex-col h-dvh"
+            style={{ background: bgPageColor }}
+        >
+            <NavBar />
+            <main
+                style={{ background: bgPageColor }}
+                className="flex flex-col items-center justify-center w-full h-dhv p-6 flex-1 relative"
+            >
+                <article className="flex-1 flex-row justify-center flex  items-center *:flex-1 w-full h-full">
+                    <BtnCopyCode
+                        cssCode={cssCode}
+                        tailwindCode={tailwindCode}
+                        inlineCode={inlineCode}
+                        bgPageColor={bgPageColor}
+                        borderColor={borderColor}
+                    />
+                    <Button
+                        textColor={textColor}
+                        bgColor={bgColor}
+                        borderColor={borderColor}
+                        textWeight={textWeight}
+                        bgOn={bgOn}
+                        borderOn={borderOn}
+                        shadowOn={shadowOn}
+                        fontSize={fontSize}
+                        width={width}
+                        height={height}
+                        borderWidth={borderWidth}
+                        shadowColor={shadowColor}
+                        borderRadius={borderRadius}
+                        borderStyle={borderStyle}
+                        shadowBlur={shadowBlur}
+                        shadowOffset={shadowOffset}
+                        letterSpacing={letterSpacing}
+                        hoverColor={hoverColor}
+                        hoverOn={hoverOn}
+                        setCssCode={setCssCode}
+                        setTailwindCode={setTailwindCode}
+                        setInlineCode={setInlineCode}
+                    />
+                </article>
+
                 <ModifyAppearance
                     bgPageColor={bgPageColor}
                     textColor={textColor}
@@ -77,41 +116,7 @@ export default function Buttons() {
                     hoverOn={hoverOn}
                     setHoverOn={setHoverOn}
                 />
-                <Button
-                    textColor={textColor}
-                    bgColor={bgColor}
-                    borderColor={borderColor}
-                    textWeight={textWeight}
-                    bgOn={bgOn}
-                    borderOn={borderOn}
-                    shadowOn={shadowOn}
-                    fontSize={fontSize}
-                    width={width}
-                    height={height}
-                    borderWidth={borderWidth}
-                    shadowColor={shadowColor}
-                    borderRadius={borderRadius}
-                    borderStyle={borderStyle}
-                    shadowBlur={shadowBlur}
-                    shadowOffset={shadowOffset}
-                    letterSpacing={letterSpacing}
-                    hoverColor={hoverColor}
-                    hoverOn={hoverOn}
-                    setOpenModal={setOpenModal}
-                    setCssCode={setCssCode}
-                    setTailwindCode={setTailwindCode}
-                    setInlineCode={setInlineCode}
-                />
-                <ModalWithCopyCode
-                    cssCode={cssCode}
-                    tailwindCode={tailwindCode}
-                    inlineCode={inlineCode}
-                    openModal={openModal}
-                    bgPageColor={bgPageColor}
-                    borderColor={borderColor}
-                    setOpenModal={setOpenModal}
-                />
-            </article>
-        </main>
+            </main>
+        </header>
     );
 }

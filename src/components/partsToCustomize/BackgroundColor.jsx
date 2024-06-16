@@ -11,9 +11,9 @@ function BackgroundColor({ bgColor, setBgColor, bgOn, setBgOn }) {
         >
             <label
                 htmlFor="colorBg"
-                className="w-full h-full flex items-center justify-center mix-blend-difference text-2xl"
+                className="w-full h-full flex items-center justify-center mix-blend-difference "
             >
-                Background Color
+                Bg Color
             </label>
             <input
                 type="color"

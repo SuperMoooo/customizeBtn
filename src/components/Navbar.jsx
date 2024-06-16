@@ -2,25 +2,22 @@ import { Link } from 'react-router-dom';
 export default function SideBar() {
     const assetsPages = ['button', 'card', 'modal', 'slider'];
     return (
-        <nav className="h-dvh border-[#636363] border-r-[1px] flex flex-col md:w-64 items-center p-6 ">
-            <ul className="flex flex-col space-y-10  w-full flex-1">
+        <nav className="w-full border-[#636363] border-b-[1px] flex flex-row  p-6 items-center justify-between">
+            <ul className="flex flex-row flex-1 justify-start space-x-7 items-center">
                 {assetsPages.map((page) => (
-                    <li
-                        key={page}
-                        className="text-center relative w-full group"
-                    >
+                    <li key={page} className="relative group">
                         <Link
                             to={`/${page}`}
-                            className="uppercase font-thin tracking-widest text-white text-2xl mix-blend-difference"
+                            className="uppercase font-thin tracking-widest text-white md:text-xl text-sm mix-blend-difference"
                         >
                             {page}
-                            <hr className="transition-all duration-300 opacity-0 group-hover:opacity-100 rotate-90 border-b-[1px] border-white absolute right-[-39px] w-8 top-4" />
                         </Link>
+                        <hr className="w-full absolute transition-all duration-300 opacity-0 mt-[23px] group-hover:border-b-[1px] group-hover:border-white group-hover:opacity-100" />
                     </li>
                 ))}
             </ul>
-            <ul className="flex flex-row space-x-14 items-center justify-center *:mix-blend-difference *:flex-1 *:w-full">
-                <li>
+            <ul className="flex flex-row space-x-4  md:space-x-14 items-center justify-center *:mix-blend-difference  *:transition-all *:duration-300">
+                <li className="hover:scale-[1.15]">
                     <a
                         href="https://www.instagram.com/andre_montoito/"
                         target="_blank"
@@ -37,7 +34,7 @@ export default function SideBar() {
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li className="hover:scale-[1.15]">
                     <a href="https://github.com/SuperMoooo" target="_blank">
                         <svg
                             width="26"
@@ -51,7 +48,7 @@ export default function SideBar() {
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li className="hover:scale-[1.15]">
                     <a
                         href="https://supermoooo.github.io/MyPortfolio/"
                         target="_blank"

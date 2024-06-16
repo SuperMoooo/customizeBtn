@@ -6,7 +6,7 @@ function BorderRadius({ borderRadius, setBorderRadius }) {
         <div className="flex items-center justify-center text-center p-6 *:flex-1">
             <label
                 htmlFor="borderRadius"
-                className="w-full h-full flex items-center justify-center mix-blend-difference text-2xl"
+                className="w-full h-full flex items-center justify-center mix-blend-difference "
             >
                 Border Radius
             </label>

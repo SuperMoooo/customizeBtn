@@ -10,7 +10,7 @@ function PageColor({ bgPageColor, setBgPageColor }) {
         >
             <label
                 htmlFor="colorBgPage"
-                className="w-full h-full flex items-center justify-center mix-blend-difference text-2xl"
+                className="w-full h-full flex items-center justify-center mix-blend-difference "
             >
                 Page Color
             </label>

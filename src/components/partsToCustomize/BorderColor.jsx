@@ -11,7 +11,7 @@ function BorderColor({ borderColor, setBorderColor, borderOn, setBorderOn }) {
         >
             <label
                 htmlFor="colorBorder"
-                className="w-full h-full flex items-center justify-center mix-blend-difference text-2xl"
+                className="w-full h-full flex items-center justify-center mix-blend-difference "
             >
                 Border Color
             </label>

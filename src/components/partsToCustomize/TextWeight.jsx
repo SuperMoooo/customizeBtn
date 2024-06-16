@@ -6,7 +6,7 @@ function TextWeight({ textWeight, setTextWeight }) {
         <div className="flex items-center justify-center text-center p-6 *:flex-1">
             <label
                 htmlFor="textWeight"
-                className="w-full h-full flex items-center justify-center mix-blend-difference text-2xl"
+                className="w-full h-full flex items-center justify-center mix-blend-difference "
             >
                 Text Weight
             </label>

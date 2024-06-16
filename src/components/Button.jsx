@@ -20,7 +20,6 @@ export default function Button({
     letterSpacing,
     hoverColor,
     hoverOn,
-    setOpenModal,
     setCssCode,
     setTailwindCode,
     setInlineCode,
@@ -34,7 +33,6 @@ export default function Button({
     };
 
     const handleOpenModal = () => {
-        setOpenModal(true);
         setCssCode(
             `button{ \n background: ${
                 bgOn ? bgColor : 'transparent'
@@ -99,9 +97,9 @@ export default function Button({
                 <div className="flex items-center justify-center flex-1 w-full">
                     <button
                         onClick={handleOpenModal}
-                        className="text-white text-xl w-16 border-[#636363] border-2 p-3 rounded-full mix-blend-difference hover:w-28 origin-center transition-all duration-300"
+                        className="text-white text-xl  border-[#636363] border-2 p-4 rounded-full mix-blend-difference hover:px-16 origin-center transition-all duration-300"
                     >
-                        {'<>'}
+                        {'Generate <>'}
                     </button>
                 </div>
             </div>

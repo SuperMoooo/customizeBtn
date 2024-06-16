@@ -9,19 +9,13 @@ function ModalWithCopyCode({
     cssCode,
     tailwindCode,
     inlineCode,
-    openModal,
     bgPageColor,
     borderColor,
-    setOpenModal,
 }) {
     const [value, setValue] = useState('1');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
-    };
-
-    const handleClose = () => {
-        setOpenModal(false);
     };
 
     const convertNewlinesToBreaks = (text) => {
@@ -34,40 +28,16 @@ function ModalWithCopyCode({
     };
 
     return (
-        <div
-            className={`absolute flex-1 flex-col items-center justify-start w-full h-dvh  ${
-                openModal ? 'flex' : 'hidden'
-            } *:mix-blend-difference *:z-[9999]`}
-            style={{
-                backgroundColor: bgPageColor,
-                backdropFilter: 'blur(10px)',
-                opacity: 0.8,
-            }}
-        >
+        <div className="flex-1 flex-col items-center justify-start mt-28 w-full h-full flex *:mix-blend-difference ">
             <TabContext value={value}>
                 <Box
                     sx={{
                         borderBottom: 1,
-                        borderColor: 'divider',
-                        backgroundColor: bgPageColor,
-                        border: `1px solid ${borderColor}`,
-                        zIndex: 9999,
-                        marginTop: '15%',
-                        position: 'relative',
+                        border: `2px solid ${borderColor}`,
                         mixBlendMode: 'difference',
+                        width: '100%',
                     }}
                 >
-                    <div
-                        onClick={handleClose}
-                        className={`cursor-pointer text-white 
-                             border-[1px]  absolute right-[-41px] top-[-1px] w-10 h-[50px] flex items-center justify-center text-xl *:mix-blend-difference *:z-[9999]`}
-                        style={{
-                            borderColor: borderColor,
-                            backgroundColor: bgPageColor,
-                        }}
-                    >
-                        X
-                    </div>
                     <TabList
                         onChange={handleChange}
                         aria-label="Style Codes"
@@ -106,6 +76,8 @@ function ModalWithCopyCode({
                         color: '#ffffff',
                         mixBlendMode: 'difference',
                         textAlign: 'center',
+                        border: `2px solid ${borderColor}`,
+                        width: '100%',
                     }}
                 >
                     {convertNewlinesToBreaks(cssCode)}
@@ -115,6 +87,8 @@ function ModalWithCopyCode({
                     sx={{
                         color: '#ffffff',
                         mixBlendMode: 'difference',
+                        border: `2px solid ${borderColor}`,
+                        width: '100%',
                         textAlign: 'center',
                     }}
                 >
@@ -126,6 +100,8 @@ function ModalWithCopyCode({
                         color: '#ffffff',
                         mixBlendMode: 'difference',
                         textAlign: 'center',
+                        border: `2px solid ${borderColor}`,
+                        width: '100%',
                     }}
                 >
                     {convertNewlinesToBreaks(inlineCode)}

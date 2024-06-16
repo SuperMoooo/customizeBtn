@@ -11,7 +11,7 @@ function HoverColor({ hoverColor, setHoverColor, hoverOn, setHoverOn }) {
         >
             <label
                 htmlFor="hoverColor"
-                className="w-full h-full flex items-center justify-center mix-blend-difference text-2xl"
+                className="w-full h-full flex items-center justify-center mix-blend-difference"
             >
                 Hover Color
             </label>

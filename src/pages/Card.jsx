@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import SideBar from '../components/SideBar';
+import NavBar from '../components/Navbar';
 import ModifyAppearance from '../components/ModifyAppearance';
 
 export default function Cards() {
@@ -9,7 +9,7 @@ export default function Cards() {
     const [bgPageColor, setBgPageColor] = useState('#1a1a1a');
     return (
         <main className="flex flex-row" style={{ background: bgPageColor }}>
-            <SideBar />
+            <NavBar />
             <article className="flex flex-col items-center justify-center w-full h-full p-6 flex-1">
                 <ModifyAppearance
                     bgPageColor={bgPageColor}

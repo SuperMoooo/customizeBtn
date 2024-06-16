@@ -11,7 +11,7 @@ function ShadowColor({ shadowColor, setShadowColor, shadowOn, setShadowOn }) {
         >
             <label
                 htmlFor="colorShadow"
-                className="w-full h-full flex items-center justify-center mix-blend-difference text-2xl"
+                className="w-full h-full flex items-center justify-center mix-blend-difference "
             >
                 Shadow Color
             </label>
