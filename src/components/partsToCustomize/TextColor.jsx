@@ -10,7 +10,7 @@ function TextColor({ textColor, setTextColor }) {
         >
             <label
                 htmlFor="colorText"
-                className="w-full h-full flex items-center justify-center mix-blend-difference "
+                className="w-full h-full flex items-center justify-center text-white "
             >
                 Text Color
             </label>

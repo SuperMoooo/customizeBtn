@@ -1,17 +1,24 @@
 import { Switch } from '@mui/material';
 import React from 'react';
 
-function BorderColor({ borderColor, setBorderColor, borderOn, setBorderOn }) {
+function BorderColor({
+    borderColor,
+    setBorderColor,
+    borderOn,
+    setBorderOn,
+    textColor,
+}) {
     return (
         <div
             className="flex items-center justify-center text-center p-6 *:cursor-pointer"
             style={{
                 background: borderColor,
+                color: textColor,
             }}
         >
             <label
                 htmlFor="colorBorder"
-                className="w-full h-full flex items-center justify-center mix-blend-difference "
+                className="w-full h-full flex items-center justify-center  "
             >
                 Border Color
             </label>

@@ -1,17 +1,24 @@
 import { Switch } from '@mui/material';
 import React from 'react';
 
-function ShadowColor({ shadowColor, setShadowColor, shadowOn, setShadowOn }) {
+function ShadowColor({
+    shadowColor,
+    setShadowColor,
+    shadowOn,
+    setShadowOn,
+    textColor,
+}) {
     return (
         <div
             className="flex items-center justify-around text-center p-6 *:cursor-pointer"
             style={{
                 background: shadowColor,
+                color: textColor,
             }}
         >
             <label
                 htmlFor="colorShadow"
-                className="w-full h-full flex items-center justify-center mix-blend-difference "
+                className="w-full h-full flex items-center justify-center "
             >
                 Shadow Color
             </label>

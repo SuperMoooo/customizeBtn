@@ -1,12 +1,15 @@
 import { Slider } from '@mui/material';
 import React from 'react';
 
-function LetterSpacing({ LetterSpacing, setLetterSpacing }) {
+function LetterSpacing({ LetterSpacing, setLetterSpacing, textColor }) {
     return (
-        <div className="flex items-center justify-center text-center p-6 *:flex-1">
+        <div
+            className="flex items-center justify-center text-center p-6 *:flex-1"
+            style={{ color: textColor }}
+        >
             <label
                 htmlFor="width"
-                className="w-full h-full flex items-center justify-center mix-blend-difference "
+                className="w-full h-full flex items-center justify-center  "
             >
                 Letter Spacing
             </label>

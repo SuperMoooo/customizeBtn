@@ -1,11 +1,14 @@
 import React from 'react';
 import { Slider } from '@mui/material';
-function BorderSize({ borderWidth, setBorderWidth }) {
+function BorderSize({ borderWidth, setBorderWidth, textColor }) {
     return (
-        <div className="flex items-center justify-center text-center p-6 *:flex-1">
+        <div
+            className="flex items-center justify-center text-center p-6 *:flex-1"
+            style={{ color: textColor }}
+        >
             <label
                 htmlFor="borderSize"
-                className="w-full h-full flex items-center justify-center mix-blend-difference "
+                className="w-full h-full flex items-center justify-center  "
             >
                 Border Size
             </label>

@@ -1,12 +1,15 @@
 import { Slider } from '@mui/material';
 import React from 'react';
 
-function ShadowOffset({ shadowOffset, setShadowOffset }) {
+function ShadowOffset({ shadowOffset, setShadowOffset, textColor }) {
     return (
-        <div className="flex items-center justify-center text-center p-6 *:flex-1">
+        <div
+            className="flex items-center justify-center text-center p-6 *:flex-1"
+            style={{ color: textColor }}
+        >
             <label
                 htmlFor="shadowOffset"
-                className="w-full h-full flex items-center justify-center mix-blend-difference "
+                className="w-full h-full flex items-center justify-center "
             >
                 Shadow Offset
             </label>

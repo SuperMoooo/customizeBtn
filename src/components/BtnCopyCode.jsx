@@ -9,7 +9,7 @@ function ModalWithCopyCode({
     cssCode,
     tailwindCode,
     inlineCode,
-    bgPageColor,
+    hoverColor,
     borderColor,
 }) {
     const [value, setValue] = useState('1');
@@ -33,7 +33,7 @@ function ModalWithCopyCode({
                 <Box
                     sx={{
                         borderBottom: 1,
-                        border: `2px solid ${borderColor}`,
+                        border: '2px solid #3A3A3A',
                         mixBlendMode: 'difference',
                         width: '100%',
                     }}
@@ -42,13 +42,14 @@ function ModalWithCopyCode({
                         onChange={handleChange}
                         aria-label="Style Codes"
                         variant="fullWidth"
+                        indicatorColor="secondary"
+                        textColor="inherit"
                     >
                         <Tab
                             label="CSS"
                             value="1"
                             sx={{
                                 color: '#ffffff',
-                                mixBlendMode: 'difference',
                             }}
                             autoFocus={true}
                         />
@@ -57,7 +58,6 @@ function ModalWithCopyCode({
                             value="2"
                             sx={{
                                 color: '#ffffff',
-                                mixBlendMode: 'difference',
                             }}
                         />
                         <Tab
@@ -65,7 +65,6 @@ function ModalWithCopyCode({
                             value="3"
                             sx={{
                                 color: '#ffffff',
-                                mixBlendMode: 'difference',
                             }}
                         />
                     </TabList>
@@ -74,9 +73,8 @@ function ModalWithCopyCode({
                     value="1"
                     sx={{
                         color: '#ffffff',
-                        mixBlendMode: 'difference',
                         textAlign: 'center',
-                        border: `2px solid ${borderColor}`,
+                        border: '2px solid #3A3A3A',
                         width: '100%',
                     }}
                 >
@@ -86,8 +84,7 @@ function ModalWithCopyCode({
                     value="2"
                     sx={{
                         color: '#ffffff',
-                        mixBlendMode: 'difference',
-                        border: `2px solid ${borderColor}`,
+                        border: '2px solid #3A3A3A',
                         width: '100%',
                         textAlign: 'center',
                     }}
@@ -98,9 +95,8 @@ function ModalWithCopyCode({
                     value="3"
                     sx={{
                         color: '#ffffff',
-                        mixBlendMode: 'difference',
                         textAlign: 'center',
-                        border: `2px solid ${borderColor}`,
+                        border: '2px solid #3A3A3A',
                         width: '100%',
                     }}
                 >

@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import BtnCopyCode from '../components/BtnCopyCode';
 
 export default function Buttons() {
-    const [textColor, setTextColor] = useState('#ffffff');
+    const [textColor, setTextColor] = useState('#6a20ab');
     const [bgColor, setBgColor] = useState('#3A3A3A');
     const [borderColor, setBorderColor] = useState('#3A3A3A');
     const [borderWidth, setBorderWidth] = useState(1);
@@ -45,7 +45,7 @@ export default function Buttons() {
                         cssCode={cssCode}
                         tailwindCode={tailwindCode}
                         inlineCode={inlineCode}
-                        bgPageColor={bgPageColor}
+                        hoverColor={hoverColor}
                         borderColor={borderColor}
                     />
                     <Button

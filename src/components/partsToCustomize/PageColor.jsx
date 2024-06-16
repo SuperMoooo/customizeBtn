@@ -1,16 +1,18 @@
 import React from 'react';
+import TextColor from './TextColor';
 
-function PageColor({ bgPageColor, setBgPageColor }) {
+function PageColor({ bgPageColor, setBgPageColor, textColor }) {
     return (
         <div
             className="flex items-center justify-center text-center p-6 *:flex-1 *:cursor-pointer"
             style={{
                 background: bgPageColor,
+                color: textColor,
             }}
         >
             <label
                 htmlFor="colorBgPage"
-                className="w-full h-full flex items-center justify-center mix-blend-difference "
+                className="w-full h-full flex items-center justify-center "
             >
                 Page Color
             </label>

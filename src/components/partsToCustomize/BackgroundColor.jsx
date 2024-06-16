@@ -1,17 +1,18 @@
 import { Switch } from '@mui/material';
 import React from 'react';
 
-function BackgroundColor({ bgColor, setBgColor, bgOn, setBgOn }) {
+function BackgroundColor({ bgColor, setBgColor, bgOn, setBgOn, textColor }) {
     return (
         <div
             className="flex items-center justify-center text-center p-6 *:cursor-pointer"
             style={{
                 background: bgColor,
+                color: textColor,
             }}
         >
             <label
                 htmlFor="colorBg"
-                className="w-full h-full flex items-center justify-center mix-blend-difference "
+                className="w-full h-full flex items-center justify-center "
             >
                 Bg Color
             </label>

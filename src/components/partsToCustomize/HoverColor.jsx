@@ -1,17 +1,24 @@
 import { Switch } from '@mui/material';
 import React from 'react';
 
-function HoverColor({ hoverColor, setHoverColor, hoverOn, setHoverOn }) {
+function HoverColor({
+    hoverColor,
+    setHoverColor,
+    hoverOn,
+    setHoverOn,
+    textColor,
+}) {
     return (
         <div
             className="flex items-center justify-center text-center p-6 *:cursor-pointer"
             style={{
                 background: hoverColor,
+                color: textColor,
             }}
         >
             <label
                 htmlFor="hoverColor"
-                className="w-full h-full flex items-center justify-center mix-blend-difference"
+                className="w-full h-full flex items-center justify-center "
             >
                 Hover Color
             </label>
