@@ -1,7 +1,16 @@
 import { Switch } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 function BackgroundColor({ bgColor, setBgColor, bgOn, setBgOn, textColor }) {
+    const [tempColor, setTempColor] = useState(bgColor);
+
+    const handleColorChange = (e) => {
+        setTempColor(e.target.value);
+    };
+
+    const handleColorComplete = () => {
+        setBgColor(tempColor);
+    };
     return (
         <div
             className="flex items-center justify-center text-center p-6 *:cursor-pointer"
@@ -21,7 +30,8 @@ function BackgroundColor({ bgColor, setBgColor, bgOn, setBgOn, textColor }) {
                 className="opacity-0 absolute"
                 id="colorBg"
                 value={bgColor}
-                onChange={(e) => setBgColor(e.target.value)}
+                onChange={handleColorChange}
+                onBlur={handleColorComplete}
             />
             <Switch
                 checked={bgOn}

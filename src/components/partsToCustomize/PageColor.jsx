@@ -1,7 +1,15 @@
-import React from 'react';
-import TextColor from './TextColor';
+import React, { useState } from 'react';
 
 function PageColor({ bgPageColor, setBgPageColor, textColor }) {
+    const [tempColor, setTempColor] = useState(bgPageColor);
+
+    const handleColorChange = (e) => {
+        setTempColor(e.target.value);
+    };
+
+    const handleColorComplete = () => {
+        setBgPageColor(tempColor);
+    };
     return (
         <div
             className="flex items-center justify-center text-center p-6 *:flex-1 *:cursor-pointer"
@@ -21,7 +29,8 @@ function PageColor({ bgPageColor, setBgPageColor, textColor }) {
                 className="opacity-0 absolute"
                 id="colorBgPage"
                 value={bgPageColor}
-                onChange={(e) => setBgPageColor(e.target.value)}
+                onChange={handleColorChange}
+                onBlur={handleColorComplete}
             />
         </div>
     );

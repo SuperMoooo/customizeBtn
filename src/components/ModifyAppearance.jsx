@@ -60,7 +60,7 @@ export default function ModifyAppearance({
     return (
         <section
             style={{ background: bgPageColor }}
-            className="grid *:text-sm rounded md:grid-cols-5 lg:grid-cols-8 grid-cols-3 gap-4  justify-items-center  *:rounded  items-center justify-center  w-full *:tracking-widest  *:border *:border-[#4b4b4b] *:shadow *:flex-1 *:w-40 *:h-20 *:flex *:items-center *:justify-center *:cursor-pointer *:space-x-2"
+            className="grid *:text-sm rounded md:grid-cols-5 lg:grid-cols-8 grid-cols-3 gap-4  justify-items-center  *:rounded  items-center justify-center  w-full *:tracking-widest  *:border *:border-[#4b4b4b] *:shadow *:flex-1 *:w-40 *:h-20 *:flex *:items-center *:justify-center *:flex-col  *:space-y-2"
         >
             <TextColor textColor={textColor} setTextColor={setTextColor} />
             <FontSize

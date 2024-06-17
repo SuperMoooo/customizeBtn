@@ -1,5 +1,5 @@
 import { Switch } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 function ShadowColor({
     shadowColor,
@@ -8,6 +8,15 @@ function ShadowColor({
     setShadowOn,
     textColor,
 }) {
+    const [tempColor, setTempColor] = useState(shadowColor);
+
+    const handleColorChange = (e) => {
+        setTempColor(e.target.value);
+    };
+
+    const handleColorComplete = () => {
+        setShadowColor(tempColor);
+    };
     return (
         <div
             className="flex items-center justify-around text-center p-6 *:cursor-pointer"
@@ -27,7 +36,8 @@ function ShadowColor({
                 className="opacity-0 absolute"
                 id="colorShadow"
                 value={shadowColor}
-                onChange={(e) => setShadowColor(e.target.value)}
+                onChange={handleColorChange}
+                onBlur={handleColorComplete}
             />
             <Switch
                 checked={shadowOn}

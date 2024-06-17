@@ -1,5 +1,5 @@
 import { Switch } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 function BorderColor({
     borderColor,
@@ -8,6 +8,15 @@ function BorderColor({
     setBorderOn,
     textColor,
 }) {
+    const [tempColor, setTempColor] = useState(borderColor);
+
+    const handleColorChange = (e) => {
+        setTempColor(e.target.value);
+    };
+
+    const handleColorComplete = () => {
+        setBorderColor(tempColor);
+    };
     return (
         <div
             className="flex items-center justify-center text-center p-6 *:cursor-pointer"
@@ -27,7 +36,8 @@ function BorderColor({
                 className="opacity-0 absolute"
                 id="colorBorder"
                 value={borderColor}
-                onChange={(e) => setBorderColor(e.target.value)}
+                onChange={handleColorChange}
+                onBlur={handleColorComplete}
             />
             <Switch
                 checked={borderOn}

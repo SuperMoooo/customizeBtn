@@ -1,5 +1,5 @@
 import { Switch } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 function HoverColor({
     hoverColor,
@@ -8,6 +8,15 @@ function HoverColor({
     setHoverOn,
     textColor,
 }) {
+    const [tempColor, setTempColor] = useState(hoverColor);
+
+    const handleColorChange = (e) => {
+        setTempColor(e.target.value);
+    };
+
+    const handleColorComplete = () => {
+        setHoverColor(tempColor);
+    };
     return (
         <div
             className="flex items-center justify-center text-center p-6 *:cursor-pointer"
@@ -27,7 +36,8 @@ function HoverColor({
                 className="opacity-0 absolute"
                 id="hoverColor"
                 value={hoverColor}
-                onChange={(e) => setHoverColor(e.target.value)}
+                onChange={handleColorChange}
+                onBlur={handleColorComplete}
             />
             <Switch
                 checked={hoverOn}
