@@ -5,13 +5,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
-function ModalWithCopyCode({
-    cssCode,
-    tailwindCode,
-    inlineCode,
-    hoverColor,
-    borderColor,
-}) {
+function BtnCopyCode({ cssCode, tailwindCode, inlineCode }) {
     const [value, setValue] = useState('1');
 
     const handleChange = (event, newValue) => {
@@ -107,4 +101,4 @@ function ModalWithCopyCode({
     );
 }
 
-export default ModalWithCopyCode;
+export default BtnCopyCode;
