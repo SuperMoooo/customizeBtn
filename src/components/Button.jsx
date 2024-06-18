@@ -32,7 +32,7 @@ export default function Button({
         setMouseHover(false);
     };
 
-    const handleOpenModal = () => {
+    const generateCode = () => {
         setCssCode(
             `button{ \n background: ${
                 bgOn ? bgColor : 'transparent'
@@ -96,7 +96,7 @@ export default function Button({
             <div className="flex flex-row w-full mt-20">
                 <div className="flex items-center justify-center flex-1 w-full">
                     <button
-                        onClick={handleOpenModal}
+                        onClick={generateCode}
                         className="text-white text-xl  border-[#636363] border-2 p-4 rounded-full mix-blend-difference hover:px-16 origin-center transition-all duration-300"
                     >
                         {'Generate <>'}

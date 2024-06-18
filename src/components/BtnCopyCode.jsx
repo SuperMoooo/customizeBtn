@@ -22,7 +22,7 @@ function BtnCopyCode({ cssCode, tailwindCode, inlineCode }) {
     };
 
     return (
-        <div className="flex-1 flex-col items-center justify-start mt-28 w-full h-full flex *:mix-blend-difference ">
+        <div className="flex-1 flex-col items-center justify-start md:mt-28 w-full h-full flex *:mix-blend-difference ">
             <TabContext value={value}>
                 <Box
                     sx={{

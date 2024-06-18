@@ -32,9 +32,9 @@ export default function HomePage() {
     return (
         <main
             style={{ background: bgPageColor }}
-            className="flex flex-col items-center justify-center w-full h-screen p-6 flex-1 relative"
+            className="flex flex-col items-center justify-center w-full h-full md:h-dvh p-6 flex-1 relative"
         >
-            <article className="flex-1 flex-row justify-center flex  items-center *:flex-1 w-full h-dhv">
+            <article className="flex-1 md:flex-row flex-col justify-center flex items-center *:flex-1 w-full h-full">
                 <BtnCopyCode
                     cssCode={cssCode}
                     tailwindCode={tailwindCode}
